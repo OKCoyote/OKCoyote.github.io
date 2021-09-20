@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ar2gether</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tagline.css">
+
+</head>
+<body class="nav--is-in-view is-tagline" style="height: 100%">
+<header class="site-header">
+  <nav class="main-nav"></nav>
+</header>
+
+
+<div class="js-loader"></div>
+
+            <div id="content" class="content-wrapper" tabindex="-1" lang="en">
+        
+<div class="home">
+<div class="logo__container"></div>
+
+<div class="js-tagline-container tagline__container"> 
+  <!-- following line (div class) for full tagline -->
+  <div class="js-tagline tagline">
+    <!-- next few lines for first word - Art -->
+    <span class="js-tagline-column tagline__column" style="cursor: auto; pointer-events: none; transform: none">
+      <h1 class="tagline__mask js-tagline-mask">
+        <span class="tagline__word">Art |</span>
+      </h1>
+      <div class="js-tagline-content tagline__content">
+        <p><span style="font-weight: 400;">We know that art has the power to change the world. Our projects address social and ecological issues expressed through the universal language of art and culture.</span></p>
+      </div>
+    </span>
+
+    <span class="js-tagline-column tagline__column">
+        <h1 class="tagline__mask js-tagline-mask">
+          <span class="tagline__word"> Community |</span></span>
+        </h1>
+        <div class="js-tagline-content tagline__content">
+          <p><span style="font-weight: 400;">Our projects create opportunities for community exchange and facilitate intergenerational dialogue with an inclusive spirit and a respect for all genders, ethnicities and religions.</span></p>
+        </div>
+      </span>
+
+      <span class="js-tagline-column tagline__column">
+        <h1 class="tagline__mask js-tagline-mask">
+          <span class="tagline__word"> Sustainability</span></span>
+        </h1>
+        <div class="js-tagline-content tagline__content">
+          <p><span style="font-weight: 400;">In the spirit of the European Green Deal, we promote sustainable mobility for net-zero emissions by 2050 to address the climate emergency.</span></p>
+        </div>
+      </span>
+    </div>
+  </div>
+
+<div class="tagline intro-mobile js-intro-mobile">
+    <div class="tagline__column">
+      <h1>
+        <span class="tagline__word">Art,</span>
+        <span class="tagline__word tagline__word--active"> Community,</span>
+        <span class="tagline__word"> Sustainability</span>
+      </h1>
+      <div class="tagline__content">
+        <p><span style="font-weight: 400;">Our projects create opportunities for community exchange and facilitate intergenerational dialogue with an inclusive spirit and a respect for all genders, ethnicities and religions.</span></p>
+      </div>
+    </div>
+    <div class="tagline__column">
+      <h1>
+        <span class="tagline__word">Art</span>
+        <span class="tagline__word"> Community,</span>
+        <span class="tagline__word tagline__word--active"> Sustainability</span>
+      </h1>
+      <div class="tagline__content">
+        <p><span style="font-weight: 400;">In the spirit of the European Green Deal, we promote sustainable mobility for net-zero emissions by 2050 to address the climate emergency.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script type="text/javascript" src="/js/vendor.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.5.4"></script>
+    -- >
+    
+    <script>
+//This script tracks scrolling and creates events in Heap analytics - added pre-launch, 1/13/20 by Gene Buonaccorsi and Adam Jacobi//
+(function(){
+  var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var quarterHeight = scrollHeight / 4;
+  var quarters = 0;
+  var scrollDistance, divisible, percent;
+  document.addEventListener("scroll", function() {
+      scrollDistance = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      divisible =  Math.trunc(scrollDistance / quarterHeight);
+    if (quarters < divisible && divisible !== Infinity){
+      scrollPercent = divisible * 25;
+      heap.track('Scroll Depth', {percent: scrollPercent});
+      quarters++;
+    }
+  });
+}());
+</script>
+</body>
+</html>
 
